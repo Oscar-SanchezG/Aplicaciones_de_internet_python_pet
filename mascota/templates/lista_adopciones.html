@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block title %}
+
+  <title>Registros adoptantes</title>
+
+  {% endblock %}
+
+
+
+{% block work %}
+<hi>Lista Adopciones</hi>
+<table class="table">
+    <thead class="thead-dark">
+        <th>Mascota</th>
+        <th>Adoptante</th>
+        <th>Fecha</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        {% for historial_mascota in object_list %}
+            <tr>
+                <td>{{historial_mascota.mascota}}</td>
+                <td>{{historial_mascota.adoptante}}</td>
+                <td>{{historial_mascota.fecha}}</td>
+                <td><a href="{% url 'editar_adopcion' historial_mascota.id %}">Editar</a></td>
+                <td><a href="{% url 'eliminar_adopcion' historial_mascota.id %}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h2></h2>
+<a href="{% url 'crear_adopcion' %}" class="btn btn-outline-success">Nueva Adopcion</a>
+<a href="{% url 'index' %}" class="btn btn-outline-danger">Salir</a>
+<h2></h2>
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block title %}
+
+  <title>Registros adoptantes</title>
+
+  {% endblock %}
+
+
+
+{% block work %}
+<hi>Lista Adoptantes</hi>
+<table class="table">
+    <thead class="thead-dark">
+        <th>A_Paterno</th>
+        <th>A_Materno</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        {% for adoptante in object_list %}
+            <tr>
+                <td>{{adoptante.apellido_pat}}</td>
+                <td>{{adoptante.apellido_mat}}</td>
+                <td>{{adoptante.nombre}}</td>
+                <td>{{adoptante.edad}}</td>
+                <td>{{adoptante.direccion}}</td>
+                <td>{{adoptante.telefono}}</td>
+                <td>{{adoptante.email}}</td>
+                <td><a href="{% url 'editar_adoptante' adoptante.id %}">Editar</a></td>
+                <td><a href="{% url 'eliminar_adoptante' adoptante.id %}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h2></h2>
+<a href="{% url 'index' %}" class="btn btn-outline-danger">Salir</a>
+<h2></h2>
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}

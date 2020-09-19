@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block title %}
+
+  <title>Crear_adoptante</title>
+
+  {% endblock %}
+
+
+
+{% block work %}
+<h2></h2>
+<h2>Registrar adopcion</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-success">Crear</button>
+</form>
+
+
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}

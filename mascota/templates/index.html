@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Refugio para animales">
+  <meta name="author" content="Sanchez Gonzalez Oscar Eduardo">
+
+ 
+
+  <title>Refugio de animales Tummy</title>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/one-page-wonder.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand " href="{% url 'menu' %}">Tummys haven</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'crear_adoptante' %}">Adoptante</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'crear_contacto' %}">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <img class="img-fluid rounded-circle" src="static/img/logo.jpg" alt="">
+        <h1 class="masthead-heading mb-0">¡No compres! mejor ADOPTA</h1>
+        <h2 class="masthead-subheading mb-0">Registrate y conocenos</h2>
+ 
+      </div>
+    </div>
+   
+  </header>
+{% block work %}
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="static/img/refugio.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">¿Quienes somos?</h2>
+            <p>Actualmentos somos el mejor de refugio de animales en todo el pais, con mas de 1000 adopciones al mes, resgistrate para ser uno mas de los nuestros</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block delete %}
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="static/img/amigos.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">Tu puedes ayudar a uno</h2>
+            <p>Miles de amigos peludos te esperan, solo tienes que hacer click en la pestaña Adoptante para llenar el registro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="static/img/spa.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Ademas</h2>
+            <p>Tenemos servicio de estancia para tus peludos por si necesitas irte de viaje, con servicio de peluqueria a domicilio, si asi lo necesitas solo pincha en el apartdo contacto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Tummy</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
+

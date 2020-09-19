@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block title %}
+
+  <title>Registros adoptantes</title>
+
+  {% endblock %}
+
+
+
+{% block work %}
+<hi>Lista Mensajes</hi>
+<table class="table">
+    <thead class="thead-dark">
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contenido</th>
+    </thead>
+    <tbody>
+        {% for contacto in object_list %}
+            <tr>
+                <td>{{contacto.nombre}}</td>
+                <td>{{contacto.email}}</td>
+                <td>{{contacto.contenido}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h2></h2>
+
+<a href="{% url 'index' %}" class="btn btn-outline-danger">Salir</a>
+<h2></h2>
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}

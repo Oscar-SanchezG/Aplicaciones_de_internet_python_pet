@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+
+
+{% block work %}
+<div class="padre" style="text-align: center;">
+    <div class="hijo">
+        <a href="{% url 'lista_mascotas' %}" class="btn btn-primary btn-xl rounded-pill mt-5">Mascotas</a> 
+        <a href="{% url 'lista_adopciones' %}" class="btn btn-primary btn-xl rounded-pill mt-5">Adopciones</a>  
+        <a href="{% url 'lista_adoptantes' %}" class="btn btn-primary btn-xl rounded-pill mt-5">Adoptantes</a> 
+        <a href="{% url 'lista_contactos' %}" class="btn btn-primary btn-xl rounded-pill mt-5">Mensajes</a>
+      </div>
+    
+    
+    <h1></h1>
+    
+   
+  </div>
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}

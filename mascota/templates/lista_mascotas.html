@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block title %}
+
+  <title>Registros mascota</title>
+
+  {% endblock %}
+
+
+
+{% block work %}
+<h1>Lista mascotas</hi>
+<table class="table">
+    <thead class="thead-dark">
+        <th>Alias</th>
+        <th>Especie</th>
+        <th>Raza</th>
+        <th>Color</th>
+        <th>Sexo</th>
+        <th>Fecha ingreso</th>
+        <th>Status</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        {% for mascota in mascotas %}
+            <tr>
+                <td>{{mascota.alias}}</td>
+                <td>{{mascota.especie}}</td>
+                <td>{{mascota.raza}}</td>
+                <td>{{mascota.color}}</td>
+                <td>{{mascota.sexo}}</td>
+                <td>{{mascota.fecha_ingreso}}</td>
+                <td>{{mascota.status}}</td>
+                <td><a href="{% url 'editar_mascota' mascota.id %}">Editar</a></td>
+                <td><a href="{% url 'eliminar_mascota' mascota.id %}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h2></h2>
+<a href="{% url 'crear_mascota' %}" class="btn btn-outline-success">Nueva mascota</a>
+<a href="{% url 'index' %}" class="btn btn-outline-danger">Salir</a>
+<h2></h2>
+{% endblock %}
+
+{% block delete %}
+
+{% endblock %}
